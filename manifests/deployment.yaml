@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kotaemon-deployment
+  labels:
+    app: kotaemon
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kotaemon
+  template:
+    metadata:
+      labels:
+        app: kotaemon
+    spec:
+      containers:
+        - name: kotaemon
+          image: taprosoft/kotaemon
+          ports:
+            - containerPort: 8000  # Adjust this if the app uses a different port
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+          env:
+            - name: KOTAEMON_ENV_VARIABLE  # Adjust based on environment variables required by kotaemon
+              value: "some-value"
+      restartPolicy: Always

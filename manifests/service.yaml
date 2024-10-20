@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kotaemon-service
+  labels:
+    app: kotaemon
+spec:
+  selector:
+    app: kotaemon
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000  # Matches the container port from the Deployment
+  type: ClusterIP

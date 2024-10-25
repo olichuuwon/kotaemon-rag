@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: kotaemon
-          image: taprosoft/kotaemon:v1.0
+          image: quay.io/jeslynlamxy/kotaemon:latest
           ports:
             - containerPort: 8000  # Adjust this if the app uses a different port
           resources:

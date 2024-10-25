@@ -18,7 +18,7 @@ spec:
         - name: kotaemon
           image: quay.io/jeslynlamxy/kotaemon:latest
           ports:
-            - containerPort: 80  # Adjust this if the app uses a different port
+            - containerPort: 7860  # Adjust this if the app uses a different port
           resources:
             limits:
               memory: "512Mi"

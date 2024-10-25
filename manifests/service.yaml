@@ -9,6 +9,6 @@ spec:
     app: kotaemon
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80  # Matches the container port from the Deployment
+      port: 7860
+      targetPort: 7860  # Matches the container port from the Deployment
   type: ClusterIP

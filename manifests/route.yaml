@@ -7,6 +7,6 @@ spec:
     kind: Service
     name: kotaemon-service
   port:
-    targetPort: 80
+    targetPort: 7860
   tls:
     termination: edge  # Adjust if you want to configure TLS termination

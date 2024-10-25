@@ -19,13 +19,13 @@ spec:
           image: quay.io/jeslynlamxy/kotaemon:latest
           ports:
             - containerPort: 7860  # Adjust this if the app uses a different port
-          resources:
-            limits:
-              memory: "512Mi"
-              cpu: "500m"
-            requests:
-              memory: "256Mi"
-              cpu: "250m"
+          # resources:
+          #   limits:
+          #     memory: "512Mi"
+          #     cpu: "500m"
+          #   requests:
+          #     memory: "256Mi"
+          #     cpu: "250m"
           env:
             - name: KOTAEMON_ENV_VARIABLE  # Adjust based on environment variables required by kotaemon
               value: "some-value"
